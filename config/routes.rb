@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  root 'static_pages#home'
+  get 'static_pages/organize'
+  get 'static_pages/help'
+  get 'static_pages/create_event'
   get 'users/new'
   get 'users/create'
   get 'users/show'

@@ -10,6 +10,57 @@
   </head>
 
   <body>
+    <div class="ui secondary  menu">
+      <a class="active item">Home</a>
+      <div class="ui icon input">
+            <input type="text" placeholder="Search...">
+          <i class="search link icon"></i>
+      </div>
+      <div class="right menu">
+        <div class="item">
+          <a class="item">
+            Organize
+            <i class="dropdown icon"></i>
+          </a>
+          <div class="ui fluid popup bottom left transition hidden">
+            <div class="ui four column relaxed equal height divided grid">
+              <div class="column">
+                <h4 class="ui header">Fabrics</h4>
+                <div class="ui link list">
+                  <a class="item">Overview</a>
+                  <a class="item">Pricing</a>
+                  <a class="item">Blog</a>
+                  <a class="item">Resources</a>
+                </div>  
+              </div>
+            </div>
+          </div>  
+          <a class="item">
+            Help
+            <i class="dropdown icon"></i>
+          </a>
+          <div class="ui fluid popup bottom left transition hidden">
+            <div class="ui four column relaxed equal height divided grid">
+              <div class="column">
+                <h4 class="ui header">Fabrics</h4>
+                <div class="ui link list">
+                  <a class="item">How it works?</a>
+                  <a class="item">How it works?</a>
+                  <a class="item">How it works?</a>
+                  <a class="item">How it works?</a>
+                </div>  
+              </div>
+            </div>
+          </div> 
+          <a class="ui item">
+            Create Event
+          </a>
+          <a class="ui item">
+            Sign
+          </a>
+        </div>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
