@@ -2,3 +2,7 @@
     border: 1px solid red;
     background-color: rgba(255, 0, 0, 0.466);
 }
+
+@mixin margin-small {
+    margin: 1em;
+}

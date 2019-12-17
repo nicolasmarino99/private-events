@@ -1,12 +1,28 @@
 <div class="query-form">
 
     <%= form_tag("/search", method: "get") do %>
-        <%= label_tag(:q, "I want to go out:", id:'item1') %>
-        <%= select_tag(:date_id, options_for_select([['Today',1],['Tomorrow',2],['This week',3],['This month',4],['This year',5]],5),id:'item2') %>
-        <%= label_tag(:q, "In:",id:'item3') %>
-        <%= select_tag(:city_id, options_for_select([['Today',1],['Tomorrow',2],['This week',3],['This month',4],['This year',5]],5),id:'item4') %>
-        <%= label_tag(:q, "And i´m in the mood for:",id:'item5') %>
-        <%= select_tag(:tag_id, options_for_select([['Anything',1],['Science&tech',2],['Music',3]],3),id:'item6') %>
-        <%= submit_tag("Search", class: "circular") %>
+        <div id='item1'>
+            <%= label_tag(:q, "I want to go out") %>
+        </div>
+        <div id='item2'>
+            <%= select_tag(:date_id, options_for_select([['Today',1],['Tomorrow',2],['This week',3],['This month',4],['This year',5]],5), class: "select-input") %>
+        </div>
+        <div id='item3'>
+            <%= label_tag(:q, "In") %>
+        </div>
+        <div id='item4'>            
+            <%= select_tag(:city_id, options_for_select([['Today',1],['Tomorrow',2],['This week',3],['This month',4],['This year',5]],5), class: "select-input") %>
+        </div>
+        <div id='item5'>
+            <%= label_tag(:q, "And I'm in the mood for") %>
+        </div>
+        <div id='item6'>
+            <%= select_tag(:tag_id, options_for_select([['Anything',1],['Science&tech',2],['Music',3]],3), class: "select-input") %>
+        </div>
+        <div id='item7'>
+            <%= button_tag :submit, class: "circular ui icon button", id: "submit-btm" do %>
+                <i class="fa fa-arrow-right"></i>
+            <% end %>
+        </div>
     <% end %>
 </div>
