@@ -1,0 +1,27 @@
+@import "../defaults/_mixins.scss";
+
+#present-container {
+    width: 100%;
+    height: 80%;
+    position: static;
+    .bg-image {
+        background-image: url(https://cdn.evbstatic.com/s3-build/perm_001/6cc698/django/images/homefeed/music-campaing-3-2600-large.jpg);
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+        position: relative;
+        
+        top: 0;
+        left:0;
+        height: inherit;
+
+        
+    }
+}
+.events-container {
+    width: 100%;
+    height: 70%;
+}
+#footer-container {
+    width: 100%;
+    height: 14%;
+}
