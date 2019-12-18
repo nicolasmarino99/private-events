@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-/*     Debug      */
+/*     Debug  & Errors    */
 
 .debug_dump {
     clear: both;
@@ -16,6 +16,11 @@
     margin-top: 45px;
     @include box_sizing;
   }
+
+.message.closable {
+    margin-left: 20%;
+    margin-right: 20%;
+}
 
 /*     Titles     */
 
