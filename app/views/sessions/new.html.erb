@@ -1,0 +1,18 @@
+<div class="sign-in-form">    
+    <h1>Sign up</h1>
+
+    <%= form_for @user do |f| %>
+
+        <%= render 'static_pages/partials/errors' %>
+
+        <%= f.label :email %>
+        <%= f.text_field :name %>
+
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+
+        <%= f.submit "log in" %>
+
+    <% end %>
+    <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
+</div>  
