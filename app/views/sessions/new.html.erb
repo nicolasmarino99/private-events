@@ -1,12 +1,10 @@
 <div class="sign-in-form">    
-    <h1>Sign up</h1>
+    <h1>Log in</h1>
 
-    <%= form_for @user do |f| %>
-
-        <%= render 'static_pages/partials/errors' %>
+    <%= form_for(:session, url: login_path) do |f| %>
 
         <%= f.label :email %>
-        <%= f.text_field :name %>
+        <%= f.text_field :email %>
 
         <%= f.label :password %>
         <%= f.password_field :password %>
