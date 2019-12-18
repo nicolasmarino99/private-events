@@ -1,0 +1,38 @@
+@import '../defaults/mixins';
+@import '../defaults/variables';
+.new {    
+    .sign-in-form  {
+        @include center;
+        margin-top: 10%;
+        .form-image {
+            background-image: url('https://cdn.iconscout.com/icon/free/png-256/p-character-alphabet-letter-32872.png');
+            background-size: cover;
+
+            height: 5em;
+            width: 5em;
+        }
+        form, h1 {
+            width: 50%;
+            @include center;
+            input {
+                width: 70%;
+                height: 2em;
+                border: 1px solid rgb(194, 194, 194);
+
+                margin-bottom: 1em;
+                &:last-child {
+                    background-color: $button-orange;
+                    color: white;
+                }
+            }
+        }
+
+    }
+
+    #navbar {
+        border-bottom: 1px solid rgb(201, 201, 201);
+        a {
+            color: black;
+        }
+    }
+}
