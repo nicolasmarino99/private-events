@@ -13,10 +13,14 @@
     box-sizing:         border-box;
 }
 @mixin center {
-    
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
+@mixin small-image {
+    background-size: cover;
+    height: 5em;
+    width: 5em;
+}

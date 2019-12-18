@@ -6,10 +6,11 @@
         margin-top: 10%;
         .form-image {
             background-image: url('https://cdn.iconscout.com/icon/free/png-256/p-character-alphabet-letter-32872.png');
-            background-size: cover;
-
-            height: 5em;
-            width: 5em;
+            @include small-image;
+        }
+        .login-image {
+            background-image: url("https://cdn3.iconfinder.com/data/icons/login-4/512/LOGIN-10-512.png");
+            @include small-image;
         }
         form, h1 {
             width: 50%;
