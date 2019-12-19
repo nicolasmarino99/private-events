@@ -11,4 +11,5 @@ class User < ApplicationRecord
     # Associations
     
     has_one_attached :profile_picture
+    has_many :created_events, foreing_key: "creator_id", class_name: "Event"
 end
