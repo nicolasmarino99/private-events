@@ -1,3 +1,5 @@
+@import "../../defaults/mixins";
+
 #navbar {
     position: absolute;
     top: 0;
@@ -41,6 +43,22 @@
                     background-color: rgba(0, 0, 0, 0.199);
                 }
             }
+        }
+        .flex-link {
+            @include center;
+            margin-top: 1em;
+            i {
+                color: white;
+                font-size: 1.3em;
+                -webkit-text-stroke: 1px #455374;
+            }
+        }
+    }
+    .profile-pic-small {
+        padding-top: 0;
+        img {
+            @include smaller-image;
+            border-radius: 50%;
         }
     }
 }

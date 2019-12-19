@@ -20,7 +20,10 @@
             <%= f.label :password_confirmation, "Password confirmation:" %>
             <%= f.password_field :password_confirmation %>
 
-            <%= f.submit "Create my account" %>
+            <%= f.label :profile_picture, "Profile picture:" %>
+            <%= f.file_field :profile_picture %>
+
+            <%= f.submit "Update profile" %>
 
         <% end %>
     </div>  

@@ -1,0 +1,37 @@
+<div id="navbar">
+    <div class="ui secondary menu navbar">
+        <a class="item logo">Private Events</a>
+        <div class="ui icon input">
+                <input type="text" placeholder="Search...">
+            <i class="search link icon"></i>
+        </div>
+        <div class="right menu">
+            <div class="hover-item flex-link">
+                <i class="fa fa-plus"></i>
+                <a class="ui item">Create Event</a>
+            </div>
+            <div class="hover-item flex-link">
+                <i class="fa fa-heart"></i>
+                <a class="ui item">Likes</a>
+            </div>
+            <div class="hover-item flex-link">
+                <i class="fa fa-ticket"></i>
+                <a class="ui item">Tickets</a>
+            </div>
+
+            <div class="ui simple dropdown item hover-item">
+                <a class="item profile-pic-small">
+                    <%= image_tag(@user.profile_picture) %>
+                    <i class="dropdown icon"></i>
+                </a>
+                <div class="menu">
+                    <div class="ui link list">
+                        <%= link_to "Profile", current_user, class: "item" %>
+                        <%= link_to "Edit profile", edit_user_path(current_user), class: "item" %>
+                        <%= link_to "Log out", logout_path, method: :delete, class:"item" %>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>

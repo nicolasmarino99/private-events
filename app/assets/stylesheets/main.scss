@@ -37,3 +37,19 @@
         color: #D0D0D2;
     }
 }
+
+/*       Images       */
+
+.login-image {
+    background-image: url("https://cdn3.iconfinder.com/data/icons/login-4/512/LOGIN-10-512.png");
+    @include small-image;
+}
+
+aside {
+    margin-top: 5em;
+    height: 100%;
+    img {
+        @include medium-image;
+        border-radius: 50%;
+    }
+}

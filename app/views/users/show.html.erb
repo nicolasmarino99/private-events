@@ -1,4 +1,10 @@
-<h1><%= @user.name %></h1>
+<%= render "static_pages/partials/navbar"%>
 
-
-<%= render 'profile_picture_form' %>
+<aside>
+    <h1><%= @user.name %></h1>
+    <% if @user.profile_picture.attached? %>
+        <%= image_tag(@user.profile_picture) %>
+    <% else %>
+        <div class="login-image"></div>  
+    <% end %>
+</aside>

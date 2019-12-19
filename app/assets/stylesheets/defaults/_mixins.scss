@@ -19,8 +19,20 @@
     flex-direction: column;
 }
 
+@mixin smaller-image {
+    background-size: cover;
+    height: 3em;
+    width: 3em;
+}
+
 @mixin small-image {
     background-size: cover;
     height: 5em;
     width: 5em;
+}
+
+@mixin medium-image {
+    background-size: cover;
+    height: 20em;
+    width: 20em;
 }
