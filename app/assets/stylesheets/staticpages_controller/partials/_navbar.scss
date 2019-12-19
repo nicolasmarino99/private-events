@@ -59,6 +59,7 @@
         img {
             @include smaller-image;
             border-radius: 50%;
+            color: black;
         }
     }
 }

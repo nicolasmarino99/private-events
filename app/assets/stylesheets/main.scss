@@ -45,11 +45,3 @@
     @include small-image;
 }
 
-aside {
-    margin-top: 5em;
-    height: 100%;
-    img {
-        @include medium-image;
-        border-radius: 50%;
-    }
-}
