@@ -1,2 +1,29 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+<div class="new">
+    <%= render 'static_pages/partials/navbar' %>
+    <div class="sign-in-form">
+        <div class="form-image"></div>
+            <h1>Create a new event</h1>
+            
+            <%= form_for @event do | t | %>
+                <%= render 'static_pages/partials/events_errors' %>
+
+                <%= t.label :name %>
+                <%= t.text_field(:name, placeholder: "Event´s name") %>
+
+                <%= t.label :date %>
+                <%= t.date_field(:date) %>
+
+                <%= t.label :location %>
+                <%= t.text_field :location, placeholder: "e.g Bogotá" %>
+
+                <%= t.label :tag %>
+                <%= t.select(:tag, options_for_select([['Anything',1],['Science&tech',2],['Music',3]],3), class: "select-input") %>
+
+                <%= t.label :description %>
+                <%= t.text_area :description %>
+
+                <%= t.submit "Create event" %>
+            <% end %>
+        </div>
+    </div>
+</div>
