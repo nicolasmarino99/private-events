@@ -32,8 +32,8 @@ class EventsController < ApplicationController
       end
 
       def logged_in_user
-        flash[:danger] = "You must sign in first"
-        redirect_to login_path
+        flash[:danger] = "You must sign in first" unless logged_in?
+        redirect_to login_path unless logged_in?
       end
 
 

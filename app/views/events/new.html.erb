@@ -1,7 +1,8 @@
 <div class="new">
     <%= render 'static_pages/partials/navbar' %>
+    <%= render 'events/sub_navbar'%>
     <div class="sign-in-form">
-        <div class="form-image"></div>
+        <div class="event-form-image"></div>
             <h1>Create a new event</h1>
             
             <%= form_for @event do | t | %>
@@ -23,6 +24,8 @@
                 <%= t.text_area :description %>
 
                 <%= t.submit "Create event" %>
+
+                <%= t.submit "Create event", id: "top-buttom" %>
             <% end %>
         </div>
     </div>

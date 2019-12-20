@@ -1,0 +1,28 @@
+@import "../defaults/mixins";
+
+.new {
+    #sub-navbar {
+        display: flex;
+        align-items: center;
+        margin-top: 76px;
+        border-radius: 0;
+        height: 108px;
+        p {
+            font-size: 1.7em;
+            margin-left: 1em;
+        }
+    }
+    #top-buttom {
+        width: 8%;
+        height: 3em;
+        position: absolute;
+        top: 110px;
+        right: 30px;
+        border: none;
+        border-radius: 5px;
+    }
+    .event-form-image {
+        background-image: url('http://pixsector.com/cache/0266455f/ava13c3ac53812cde1b88.png');
+        @include small-image;
+    }
+}
