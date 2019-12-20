@@ -22,7 +22,7 @@
             <div class="ui simple dropdown item hover-item">
                 <a class="item profile-pic-small">
                     
-                    <% if @user.profile_picture.attached? %>
+                    <% if @user && @user.profile_picture.attached? %>
                         <%= image_tag(current_user.profile_picture) %>
                     <% else %>
                          <img url='https://cdn3.iconfinder.com/data/icons/login-4/512/LOGIN-10-512.png'></img>
