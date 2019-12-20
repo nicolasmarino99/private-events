@@ -1,2 +1,16 @@
-<h1>Events#create</h1>
-<p>Find me in app/views/events/create.html.erb</p>
+<%= form_for @event do | t | %>
+    <%= t.label :name %>
+    <%= t.text_field(:name, placeholder: "Event´s name") %>
+
+    <%= t.label :date %>
+    <%= t.date_field(:date) %>
+
+    <%= t.label :location %>
+    <%= t.text_field :location, placeholder: "e.g Bogotá" %>
+
+    <%= t.label :tag %>
+    <%= select_tag(:tag, options_for_select([['Anything',1],['Science&tech',2],['Music',3]],3), class: "select-input") %>
+
+    <%= t.label :description %>
+    <%= t.text_area :description %>
+<% end %>
