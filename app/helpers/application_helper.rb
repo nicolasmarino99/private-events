@@ -8,4 +8,7 @@ module ApplicationHelper
         "ui blue message"
     end
   end
+  def show_all_events
+    @all_events = current_user.events.pluck(:id)
+  end
 end
