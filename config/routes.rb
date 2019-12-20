@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :events
   root 'static_pages#home'
   get 'static_pages/organize'
   get 'static_pages/help'
