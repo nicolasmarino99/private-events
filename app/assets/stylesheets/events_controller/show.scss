@@ -1,0 +1,34 @@
+@import "../defaults/_mixins.scss";
+
+.bg-image {
+    @include bg-image;
+    height: 500px;
+}
+
+.center {
+    @include center;
+    margin: 10% auto;
+    padding: 3em;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 30%;
+    .top {
+        border-bottom: 1px solid black;
+        width: 100%;
+        h1 {
+            font-size: 4em;
+            margin: 0 !important;
+        }
+        h4 {
+            color: rgb(168, 159, 159);
+            margin: 0;
+        }
+        #last {
+            padding-bottom: 1em !important;
+        }
+    }
+    .bottom {
+        width: 100%;
+        margin-top: 2em;
+    }
+}

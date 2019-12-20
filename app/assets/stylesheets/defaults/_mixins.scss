@@ -19,6 +19,8 @@
     flex-direction: column;
 }
 
+/*      Images        */
+
 @mixin smaller-image {
     background-size: cover;
     height: 3em;
@@ -35,4 +37,14 @@
     background-size: cover;
     height: 20em;
     width: 20em;
+}
+
+@mixin bg-image {
+    background-image: url(https://cdn.evbstatic.com/s3-build/perm_001/6cc698/django/images/homefeed/music-campaing-3-2600-large.jpg);
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    height: 100%;
+    border: none;
+    opacity: 0.8; 
+    transform: scale(1.1);
 }
