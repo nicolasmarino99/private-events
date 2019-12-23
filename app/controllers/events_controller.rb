@@ -14,7 +14,8 @@ class EventsController < ApplicationController
     if @event.valid?
       @event.save
       flash[:sucess] = "Succesfull event creation"
-      redirect_to root_path
+      @event.attendees.push(current_user)
+      redirect_to @event
     else
       render 'new'
     end
@@ -24,11 +25,10 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
-
-    private
+  private
 
       def events_params
-        params.require(:event).permit(:name, :date, :location,:description, :tag)
+        params.require(:event).permit(:name, :date, :location, :description, :tag)
       end
 
       def logged_in_user

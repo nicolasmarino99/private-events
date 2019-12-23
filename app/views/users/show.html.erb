@@ -16,7 +16,6 @@
         <h2>Attended events (<%= list_of_events.count%>)</h2>
         <ul>
             <% list_of_events.each do |event| %>
-                
                 <li>
                 <%= link_to event_path do %>
                         <%= event %>
@@ -38,5 +37,7 @@
             <% end %>
         </ul>
     </div>
+
+    
     
 </div>
