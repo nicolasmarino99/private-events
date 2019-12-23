@@ -10,12 +10,27 @@
             <div class="login-image"></div>  
         <% end %>
     </aside>
-    <div class="aside-2"></div>
+    <div class="aside-2">
+        
+        <% list_of_events = current_user.attended_events.pluck(:name) %>
+        <h2>Attended events (<%= list_of_events.count%>)</h2>
+        <ul>
+            <% list_of_events.each do |event| %>
+                
+                <li>
+                <%= link_to event_path do %>
+                        <%= event %>
+                    <% end %>
+                </li>
+            <% end %>
+        </ul>
+    </div>
     <div class="sugest-events"></div >
     <div class="events">
-        <h1>Your events:</h1>
-        <ul><% @all_events = current_user.events.pluck(:name) %>
-            <% @all_events.each do |event| %>
+        <% all_events = current_user.events.pluck(:name) %>     
+        <h1>Created events:</h1>
+        <ul>
+            <% all_events.each do |event| %>
                 <li><%= link_to event_path do %>
                         <%= event %>
                     <% end %>

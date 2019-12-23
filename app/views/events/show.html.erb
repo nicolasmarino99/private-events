@@ -12,8 +12,15 @@
             <h2>Location</h2>
             <p><%= @event.location %></p>
         </div>
-        <%= link_to event_path do %>
-                        <%= event %>
-    <% end %>
+        <div class="bottom">
+            <% list_of_users = @event.attendees.pluck(:name) %>
+            <h2>List of attendees (<%= list_of_users.count%>)</h2>                                   
+            <% list_of_users.each do | attendee | %>
+                <ul>
+                    <li><%= attendee %></li>
+                </ul>
+            <% end %>
+        </div>
+
     </div>
 </div>
