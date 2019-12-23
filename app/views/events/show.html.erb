@@ -2,7 +2,7 @@
     <%= render 'static_pages/partials/navbar' %>
     <div class=center>
         <div class="top">
-            <h4><%= @event.date %></h4>
+            <h4><%= @event.date.to_formatted_s(:long_ordinal) %></h4>
             <h1><%= @event.name %></1>
             <h4 id="last">by <%= @event.creator.name %></h4>
         </div>

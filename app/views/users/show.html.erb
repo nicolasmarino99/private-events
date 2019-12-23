@@ -14,9 +14,12 @@
     <div class="sugest-events"></div >
     <div class="events">
         <h1>Your events:</h1>
-        <ul><% @all_events = current_user.events.pluck(:id) %>
+        <ul><% @all_events = current_user.events.pluck(:name) %>
             <% @all_events.each do |event| %>
-                <li><%= event %></li>
+                <li><%= link_to event_path do %>
+                        <%= event %>
+                    <% end %>
+                </li>
             <% end %>
         </ul>
     </div>
