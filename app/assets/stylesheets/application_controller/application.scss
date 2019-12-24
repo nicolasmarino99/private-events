@@ -6,6 +6,7 @@
     position: static;
     overflow: hidden;
     .bg-image {
+        background-image: url(https://cdn.evbstatic.com/s3-build/perm_001/6cc698/django/images/homefeed/music-campaing-3-2600-large.jpg);
         @include bg-image;
     }
     .small-image {

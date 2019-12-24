@@ -23,6 +23,9 @@
                 <%= t.label :description %>
                 <%= t.text_area :description %>
 
+                <%= t.label :event_picture, "Add a picture to your event:" %>
+                <%= t.file_field :event_picture %>
+
                 <%= t.submit "Create event" %>
 
                 <%= t.submit "Create event", id: "top-buttom" %>

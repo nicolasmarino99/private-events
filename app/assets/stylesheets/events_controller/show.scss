@@ -1,34 +1,67 @@
 @import "../defaults/_mixins.scss";
 
-.bg-image {
-    @include bg-image;
-    height: 500px;
+.bg-container {
+    position: absolute;
+    height: 55%;
+    margin-top: 4%;
+    top: 0;
+    overflow: hidden;
+    z-index: 0;
+    .bg-event {
+        @include bg-image;
+    }
 }
 
 .center {
+    position: relative;
     @include center;
     margin: 10em auto;
-    padding: 3em;
     border: 1px solid black;
     border-radius: 5px;
-    width: 30%;
-    .top {
+    width: 50%;
+    z-index: 2;
+    background-color: white;
+    filter: none;
+    .middle-row {
+        width: 100%;
         border-bottom: 1px solid black;
-        width: 100%;
-        h1 {
-            font-size: 4em;
-            margin: 0 !important;
-        }
-        h4 {
-            color: rgb(168, 159, 159);
-            margin: 0;
-        }
-        #last {
-            padding-bottom: 1em !important;
-        }
     }
-    .bottom {
+    .row {
+        display: flex;
         width: 100%;
-        margin-top: 2em;
+        .event-picture-small {
+            img {
+            height: 100%;
+            width: 100%;
+            }
+        }
+        .top {
+            border-bottom: 1px solid black;
+            width: 100%;
+            padding: 2em;
+            justify-content: space-between;
+            h1 {
+                font-size: 3em;
+                margin: 0 !important;
+                padding: 1.5em 0;
+            }
+            h4 {
+                color: rgb(168, 159, 159);
+                margin: 0;
+            }
+            #last {
+                padding-bottom: 1em !important;
+            }
+        }
+        .bottom {
+            padding: 2em;
+            margin-top: 2em;
+        }
+        .left {
+            width: 65%;
+            ul {
+                list-style: none;
+            }
+        }
     }
 }
