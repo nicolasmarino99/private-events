@@ -1,24 +1,29 @@
-# README
+# Private Events
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In this app we created a blog where users can create and attend events, similar to [Everbrite](https://www.eventbrite.com/). It has the following functionalities:
 
-Things you may want to cover:
+- Sign up new user;
+- Authenticate user;
+- Create new events.
 
-* Ruby version
+## Preview
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+## Built with
 
-* Database initialization
+- HTML 5 (erb);
+- CSS 3 (scss);
+- Ruby 2.6.3;
+- Rails 6.0.1;
+- Semantic UI sass.
 
-* How to run the test suite
+## Authors
 
-* Services (job queues, cache servers, search engines, etc.)
+:woman: **Bruna Genz**
 
-* Deployment instructions
+- Github: [@bruna-genz](https://github.com/bruna-genz)
 
-* ...
+:man: **Nicolás Mariño**
+
+- Github: [@nicolasmarino99](https://github.com/nicolasmarino99)
