@@ -4,7 +4,7 @@
     position: absolute;
     width: 100%;
     height: 55%;
-    margin-top: 4%;
+    margin-top: 5.2%;
     top: 0;
     overflow: hidden;
     z-index: 0;
@@ -20,7 +20,7 @@
     position: relative;
     @include center;
     margin: 10em auto;
-    border: 1px solid black;
+    border: 1px solid rgb(211, 211, 211);
     border-radius: 5px;
     width: 50%;
     z-index: 2;
@@ -28,7 +28,7 @@
     filter: none;
     .middle-row {
         width: 100%;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid rgb(211, 211, 211);
     }
     .row {
         display: flex;
@@ -40,7 +40,7 @@
             }
         }
         .top {
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid rgb(211, 211, 211);
             width: 100%;
             padding: 2em;
             justify-content: space-between;
