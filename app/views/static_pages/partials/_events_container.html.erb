@@ -15,6 +15,11 @@
   </div>
 </div>
 <div class="ui segment">
-    <% # render 'static_pages/partials/events_container' %>
-    
+    <ul class="events-list">
+      <% @events.upcoming.each do |event| %>
+          <%= link_to event do %>
+            <%= render event %>
+          <% end %>
+      <% end %>
+    </ul>
 </div>

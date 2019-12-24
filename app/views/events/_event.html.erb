@@ -1,43 +1,14 @@
 <li>
-    <div class="center">
-        <div class="row">
-            <div class="event-picture-small">
-                <% if event.event_picture.attached? %>
-                    <%= image_tag(event.event_picture) %>
-                <% end %>
-            </div>
-            <div class="top">
-                <h4><%= event.date.strftime("%B") %></h4>
-                <h4><%= event.date.strftime("%d") %></h4>
-                <h1><%= event.name %></1>
-                <h4 id="last">by <%= event.creator.name %></h4>
-            </div>
-        </div>
-        <div class="middle-row">
-            <h1>Button</h1>
-        </div>
-        <div class="row">
-        <div class="bottom left">
-            <h2>About this event</h2>
-            <p><%= event.description %></p>
-
-            <% list_of_users = event.attendees.pluck(:name) %>
-            <h2>List of attendees (<%= list_of_users.count%>)</h2>                                   
-            <% list_of_users.each do | attendee | %>
-                <ul>
-                    <li><%= attendee %></li>
-                </ul>
+    <div>
+        <div class="event-picture-small">
+            <% if event.event_picture.attached? %>
+                <%= image_tag(event.event_picture) %>
             <% end %>
         </div>
-        <div class="bottom right">
-            <h4>Date</h4>
-                <p><%= event.date.strftime("%B %d, %Y") %></p>
-
-            <h4>Location</h4>
-                <p><%= event.location %></p>
+        <div class="top">
+            <h4 id="date"><%= event.date.to_formatted_s(:long_ordinal) %></h4>
+            <h1><%= event.name %></1>
+            <h4 id="last">by <%= event.creator.name %></h4>
         </div>
-        </div>
-
     </div>
-
 </li>

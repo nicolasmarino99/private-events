@@ -4,7 +4,9 @@
     </div>    
     <div class="bg-container">
     <div class="bg-event">
-        <%= image_tag(@event.event_picture) %>
+        <% if @event.event_picture.attached? %>
+            <%= image_tag(@event.event_picture) %>
+        <% end %>
     </div>
     </div>
     <div class="center">
