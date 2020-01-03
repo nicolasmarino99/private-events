@@ -25,6 +25,9 @@
         </div>
         <div class="middle-row">
             <h1>Button</h1>
+            <% if @event.creator != current_user && current_user.attended_events.find_by(id: @event.id).nil? && @event.date >= Date.today %>
+                <%= link_to "Attend this event", attend_event_path(@event), class:'ui button'%>
+            <% end %>
         </div>
         <div class="row">
         <div class="bottom left">

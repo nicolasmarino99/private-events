@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :logged_in_user, only: [:new, :create]
+  before_action :logged_in_user, only: [:new, :create, :attend]
   
   def show
     @event = Event.find(params[:id])
@@ -23,6 +23,16 @@ class EventsController < ApplicationController
 
   def index 
     @events = Event.all
+  end
+
+  def attend 
+    @event = Event.find(params[:id])
+    @attendance = Attendance.new(attendee: current_user, attended_event: @event)
+    if @attendance.save
+      redirect_to current_user
+    else
+      render 'index'
+    end
   end
 
   private
