@@ -12,10 +12,11 @@
             <% end %>
         </div>
         <h1><%= @user.name %></h1>
+        <h2><%= @user.email %></h2>
     </aside>
     <div class="aside-2">
         <% list_of_events = current_user.attended_events.pluck(:name) %>
-        <h2>Attended events (<%= list_of_events.count%>)</h2>
+        <h1>Attended events (<%= list_of_events.count%>)</h1>
         <div>
             <h2>Upcoming events</h2>
             <ul>
@@ -40,8 +41,6 @@
                 <% end %>
             </ul>
         </div>
-    </div>
-    <div class="sugest-events">
     </div>
     <div class="events">
         <% all_events = current_user.events.pluck(:name) %>     
