@@ -8,7 +8,7 @@ In this app we created a blog where users can create and attend events, similar 
 
 ## Preview
 
-
+![Alt text](app/assets/images/PrivateEvents.jpg "Optional title")
 
 ## Built with
 
