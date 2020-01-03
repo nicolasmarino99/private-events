@@ -12,23 +12,24 @@
             </div>
             <div class="hover-item flex-link">
                 <i class="fa fa-heart"></i>
-                <a class="ui item">Likes</a>
+                <%= link_to "Log out", logout_path, method: :delete, class:"ui item" %>
             </div>
             <div class="hover-item flex-link">
                 <i class="fa fa-ticket"></i>
                 <a class="ui item">Tickets</a>
             </div>
 
+            
             <div class="ui simple dropdown item hover-item">
                 <a class="item profile-pic-small">
                     
                     <% if @user && @user.profile_picture.attached? %>
                         <%= image_tag(current_user.profile_picture) %>
                     <% else %>
-                         <img url='https://cdn3.iconfinder.com/data/icons/login-4/512/LOGIN-10-512.png'></img>
-
+                        <img url='https://cdn3.iconfinder.com/data/icons/login-4/512/LOGIN-10-512.png'></img>
                     <% end %>
                     <i class="dropdown icon"></i>
+                
                 </a>
                 <div class="menu">
                     <div class="ui link list">

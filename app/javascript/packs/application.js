@@ -9,11 +9,9 @@ require("@rails/activestorage").start()
 require("channels")
 // Loads all Semantic javascripts
 //= require semantic-ui
+//= require semantic-ui/modal
+//= require semantic-ui/dropdown
 
-$(function(){
-    $('.ui.dropdown').dropdown();
-})
-    
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.
