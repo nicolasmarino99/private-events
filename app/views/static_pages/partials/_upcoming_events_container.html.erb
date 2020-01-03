@@ -1,20 +1,28 @@
 <div class="ui secondary pointing menu">
   <a class="active item">
-    Home
+    All
   </a>
   <a class="item">
-    Messages
+    For you
   </a>
   <a class="item">
-    Friends
+    This weekend
   </a>
-  <div class="right menu">
-    <a class="ui item">
-      Logout
-    </a>
-  </div>
+  <a class="item">
+    Free
+  </a>
+  <a class="item">
+    Music
+  </a>
+  <a class="item">
+    Food & Drink
+  </a>
+  <a class="item">
+    Charity & Causes
+  </a>
 </div>
 <div class="ui segment">
+    <h2>Upcoming events</h2>
     <ul class="events-list">
       <% @events.upcoming.each do |event| %>
           <%= link_to event do %>

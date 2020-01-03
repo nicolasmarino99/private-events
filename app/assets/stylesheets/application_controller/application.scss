@@ -23,6 +23,10 @@
     margin: 10em auto 0 auto;
     width: 70%;
     height: 70%;
+    h2 {
+        margin-left: 2em;
+        padding-top: 1em;
+    }
     .events-list {
         display: flex;
         flex-wrap: wrap;

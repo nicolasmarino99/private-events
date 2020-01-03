@@ -1,0 +1,10 @@
+<div class="ui segment">
+    <h2>Previous events</h2>
+    <ul class="events-list">
+      <% @events.past.each do |event| %>
+          <%= link_to event do %>
+            <%= render event %>
+          <% end %>
+      <% end %>
+    </ul>
+</div>

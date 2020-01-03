@@ -29,6 +29,12 @@
     .middle-row {
         width: 100%;
         border-bottom: 1px solid rgb(211, 211, 211);
+        .button {
+            margin: 1em;
+            display: flex;
+            justify-self: flex-end;
+            justify-content: center;
+        }
     }
     .row {
         display: flex;
