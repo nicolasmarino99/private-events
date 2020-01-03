@@ -1,6 +1,7 @@
-module UsersHelper
+# frozen_string_literal: true
 
-    def attended_events
-        current_user.attended_events
-    end
+module UsersHelper
+  def attended_events
+    current_user.attended_events
+  end
 end

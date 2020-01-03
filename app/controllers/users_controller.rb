@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   def new
     @user = User.new
@@ -7,7 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(users_params)
     if @user.save
       log_in @user
-      flash[:success] = "Welcome to Private Events"
+      flash[:success] = 'Welcome to Private Events'
       redirect_to @user
     else
       render 'new'
@@ -21,7 +23,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(users_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = 'Profile updated'
       redirect_to @user
     else
       'edit'
@@ -44,8 +46,7 @@ class UsersController < ApplicationController
 
   private
 
-    def users_params
-      params.require(:user).permit(:name, :email, :password,:password_confirmation, :profile_picture)
-    end
-
+  def users_params
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :profile_picture)
+  end
 end
