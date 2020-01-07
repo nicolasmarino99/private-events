@@ -25,11 +25,4 @@ RSpec.feature "Users", type: :feature do
     end
   end
   
-  context 'update user' do
-  
-  end
-
-  context 'destroy user' do
-
-  end
 end
