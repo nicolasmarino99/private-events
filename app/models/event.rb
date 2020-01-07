@@ -9,7 +9,6 @@ class Event < ApplicationRecord
   validates :location, presence: true
   validates :tag, presence: true
   validates :description, presence: true
-  validates :event_picture, presence: true
 
   # Associations
 

@@ -41,10 +41,6 @@ RSpec.feature "Sessions", type: :feature do
       click_button 'log in'
       click_link 'Log out'
       expect(page).to have_content('Log in')
-    end
-
-    scenario 'Should fail' do 
-    end
-  
+    end  
   end
 end
