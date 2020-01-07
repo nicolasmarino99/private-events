@@ -45,19 +45,20 @@ RSpec.describe Event, type: :model do
       expect(event.macro).to eq(:belongs_to)
     end
   end
+
   context 'Scopes tests'  do
     let (:params) { {name: "name", location: "location", tag: "music", description: "some description"} }
 
     before(:each) do
-      Event.new(params.merge(date: Time.now - 1)).save
-      Event.new(params.merge(date: Time.now - 1)).save
-      Event.new(params.merge(date: Time.now + 10)).save
-      Event.new(params.merge(date: Time.now + 10)).save
-      Event.new(params.merge(date: Time.now + 10)).save
+      Event.new(params.merge(date: DateTime.now - 1)).save
+      Event.new(params.merge(date: DateTime.now - 1)).save
+      Event.new(params.merge(date: DateTime.now + 10)).save
+      Event.new(params.merge(date: DateTime.now + 10)).save
+      Event.new(params.merge(date: DateTime.now + 10)).save
     end
 
     it 'Should return past events' do
-      expect(Event.date.past.size).to eq(2)
+      expect(Event.past.size).to eq(2)
     end
 
     it 'Should return upcoming events' do
