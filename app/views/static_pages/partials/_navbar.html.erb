@@ -1,0 +1,52 @@
+<% if logged_in? %>
+    <%= render 'static_pages/partials/logged_in_navbar' %>
+<% else %>
+    <div id="navbar">
+        <div class="ui secondary menu navbar">
+            <%= link_to "Private Events", root_path, class: "item logo" %>
+            <div class="ui icon input">
+                    <input type="text" placeholder="Search...">
+                <i class="search link icon"></i>
+            </div>
+
+            <div class="right menu">
+                <div class="ui simple dropdown item hover-item" style="z-index:1000">
+                <a class="item">
+                    Organize
+                    <i class="dropdown icon"></i>
+                </a>
+                
+                <div class="menu ">
+                    <div class="ui link list">
+                        <a class="item">Overview</a>
+                        <a class="item">Pricing</a>
+                        <a class="item">Blog</a>
+                        <a class="item">Resources</a>
+                    </div>  
+                </div>  
+                </div>
+
+                <div class="ui simple dropdown item hover-item">
+                <a class="item">
+                    Help
+                    <i class="dropdown icon"></i>
+                </a>
+                <div class="menu">
+                    <div class="ui link list">
+                        <a class="item">How it works?</a>
+                        <a class="item">How it works?</a>
+                        <a class="item">How it works?</a>
+                        <a class="item">How it works?</a>
+                    </div>
+                </div> 
+                </div>
+                <div class="hover-item">
+                    <%= link_to "Create event", new_event_path, class: "ui item"%>
+                </div>
+                <div class="hover-item">
+                    <%= link_to "Log in", login_path, class: "ui item" %>
+                </div>
+            </div>
+        </div>
+    </div>
+<% end %>

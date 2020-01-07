@@ -1,0 +1,20 @@
+<div class="new">
+    <%= render 'static_pages/partials/navbar' %>
+    <div class="sign-in-form">  
+        <div class="login-image"></div>
+        <h1>Log in</h1>
+
+        <%= form_for(:session, url: login_path) do |f|%>
+
+            <%= f.label :email %>
+            <%= f.text_field :email %>
+
+            <%= f.label :password %>
+            <%= f.password_field :password %>
+
+            <%= f.submit "log in" %>
+
+        <% end %>
+        <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
+    </div>  
+</div>

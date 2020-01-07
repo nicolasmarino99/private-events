@@ -1,0 +1,33 @@
+<div class="ui secondary pointing menu">
+  <a class="active item">
+    All
+  </a>
+  <a class="item">
+    For you
+  </a>
+  <a class="item">
+    This weekend
+  </a>
+  <a class="item">
+    Free
+  </a>
+  <a class="item">
+    Music
+  </a>
+  <a class="item">
+    Food & Drink
+  </a>
+  <a class="item">
+    Charity & Causes
+  </a>
+</div>
+<div class="ui segment">
+    <h2>Upcoming events</h2>
+    <ul class="events-list">
+      <% @events.upcoming.each do |event| %>
+          <%= link_to event do %>
+            <%= render event %>
+          <% end %>
+      <% end %>
+    </ul>
+</div>

@@ -1,0 +1,19 @@
+<div class="new"> 
+    <%= render 'static_pages/partials/navbar' %>
+    <div>
+        <h1>Upcoming events</h1>
+        <ul class="all-events">
+            <% @events.upcoming.each do |event| %>
+                <%= render event %>
+            <% end %>
+        </ul>
+    <div>
+    <div>
+        <h1>Past events</h1>
+        <ul class="all-events">
+            <% @events.past.each do |event| %>
+                <%= render event %>
+            <% end %>
+        </ul>
+    <div>
+</div>

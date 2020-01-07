@@ -1,0 +1,39 @@
+@import '../defaults/mixins';
+@import '../defaults/variables';
+.new {    
+    .sign-in-form  {
+        @include center;
+        margin-top: 10%;
+        .form-image {
+            background-image: url('https://cdn.iconscout.com/icon/free/png-256/p-character-alphabet-letter-32872.png');
+            @include small-image;
+        }
+        .login-image {
+            background-image: url("https://cdn3.iconfinder.com/data/icons/login-4/512/LOGIN-10-512.png");
+            @include small-image;
+        }
+        form, h1 {
+            width: 50%;
+            @include center;
+            input {
+                width: 70%;
+                height: 2em;
+                border: 1px solid rgb(194, 194, 194);
+
+                margin-bottom: 1em;
+                &:last-child {
+                    background-color: $button-orange;
+                    color: white;
+                }
+            }
+        }
+
+    }
+
+    #navbar {
+        border-bottom: 1px solid rgb(201, 201, 201);
+        a {
+            color: black;
+        }
+    }
+}
