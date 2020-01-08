@@ -10,12 +10,12 @@ RSpec.describe User, type: :model do
       expect(user).to_not be_valid
     end
 
-    it 'name should be between 5 and 20 characters' do
-      user.name = 'U' * 30
+    it 'name should be between 2 and 50 characters' do
+      user.name = 'U' * 60
       expect(user).to_not be_valid
     end
 
-    it 'name should be between 5 and 20 characters' do
+    it 'name should be between 2 and 50 characters' do
       user.name = 'U' 
       expect(user).to_not be_valid
     end

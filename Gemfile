@@ -7,6 +7,7 @@ ruby '2.6.3'
 gem 'bcrypt'
 gem 'font-awesome-rails'
 gem 'semantic-ui-sass'
+gem 'faker'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
