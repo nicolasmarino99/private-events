@@ -1,0 +1,66 @@
+@import "../../defaults/mixins";
+
+#navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    .logo {
+        font-size: 2em;
+        font-weight: bold;
+    }
+    .input {
+        width: 22%;
+        margin: 0.8em 0;
+        border-radius: 0px 6px 6px 0px !important;
+    }
+    a {
+        filter: none;
+        color: white;
+        z-index: 2;
+    }
+    .item:hover {
+        background-color: rgba(255, 0, 0, 0);
+    }  
+    .right {
+        margin-right: 20px;
+        .simple {
+            margin-left: 0;
+            padding-right: 0;
+            height: 100%;
+        }
+        .hover-item {
+            display: flex;
+            align-items: center;
+            &:hover {
+                background-color: rgba(241, 238, 238, 0.089);
+            }
+        }
+        .list {
+            a {
+                color: black;
+                padding: 1em;
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.199);
+                    z-index: 3;
+                }
+            }
+        }
+        .flex-link {
+            @include center;
+            margin-top: 1em;
+            i {
+                color: white;
+                font-size: 1.3em;
+                -webkit-text-stroke: 1px #455374;
+            }
+        }
+    }
+    .profile-pic-small {
+        padding-top: 0;
+        img {
+            @include smaller-image;
+            border-radius: 50%;
+            color: black;
+        }
+    }
+}

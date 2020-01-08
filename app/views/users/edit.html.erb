@@ -1,0 +1,30 @@
+<div class="new">
+    <%= render 'static_pages/partials/navbar' %>
+    <div class="sign-in-form">
+        <div class="form-image"></div>    
+        <h1>Let´s begin</h1>
+
+        <%= form_for @user do |f| %>
+
+            <%= render 'static_pages/partials/errors' %>
+
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+
+            <%= f.label :email %>
+            <%= f.email_field :email %>
+
+            <%= f.label :password %>
+            <%= f.password_field :password %>
+
+            <%= f.label :password_confirmation, "Password confirmation:" %>
+            <%= f.password_field :password_confirmation %>
+
+            <%= f.label :profile_picture, "Profile picture:" %>
+            <%= f.file_field :profile_picture %>
+
+            <%= f.submit "Update profile" %>
+
+        <% end %>
+    </div>  
+</div>  

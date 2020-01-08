@@ -1,0 +1,15 @@
+<li>
+    <div>
+        <div class="event-picture-small">
+            <% if event.event_picture.attached? %>
+                <%= image_tag(event.event_picture) %>
+            <% end %>
+        </div>
+        <div class="top">
+            <h4 id="date"><%= event.date.to_formatted_s(:long_ordinal) %></h4>
+            <h1><%= event.name %></1>
+            <h4 id="last">by <%= event.creator.name %></h4>
+        </div>
+        
+    </div>
+</li>

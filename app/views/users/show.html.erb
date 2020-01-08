@@ -1,0 +1,57 @@
+
+<%= render "static_pages/partials/navbar"%>
+<div class="grid-profile">
+    <header></header>
+    <aside>
+        <div class="user-bg-image"></div>
+        <div class="profile-picture">
+            <% if @user.profile_picture.attached? %>
+                <div class="login-image"><%= image_tag(@user.profile_picture) %></div>
+            <% else %>
+                <div class="login-image"></div>  
+            <% end %>
+        </div>
+        <h1><%= @user.name %></h1>
+        <h2><%= @user.email %></h2>
+    </aside>
+    <div class="aside-2">
+        <% list_of_events = current_user.attended_events.pluck(:name) %>
+        <h1>Attended events (<%= list_of_events.count%>)</h1>
+        <div>
+            <h2>Upcoming events</h2>
+            <ul>
+                <% @upcoming_events.pluck(:name).each do |event| %>
+                    <li>
+                        <%= link_to event_path do %>
+                            <%= event %>
+                        <% end %>
+                    </li>
+                <% end %>
+            </ul>
+        </div>
+        <div>
+            <h2>Previous events</h2>
+            <ul>
+                <% @previous_events.pluck(:name).each do |event| %>
+                    <li>
+                        <%= link_to event_path do %>
+                            <%= event %>
+                        <% end %>
+                    </li>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+    <div class="events">
+        <% all_events = current_user.events.pluck(:name) %>     
+        <h1>Created events:</h1>
+        <ul>
+            <% all_events.each do |event| %>
+                <li><%= link_to event_path do %>
+                        <%= event %>
+                    <% end %>
+                </li>
+            <% end %>
+        </ul>
+    </div>    
+</div>
