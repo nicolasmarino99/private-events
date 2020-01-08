@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg2"
+   height="32"
+   width="32"
+   style="fill:none;stroke:#000000;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round"
+   version="1.1">
+  <metadata
+     id="metadata4">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6">
+    <clipPath
+       id="clipPath8">
+      <path
+         d="M -20,50 10,13 c 5.522847,0 10,4.477153 10,10 L 40,50 20,-30"
+         id="path10" />
+    </clipPath>
+  </defs>
+  <g
+     id="body"
+     clip-path="url(#clipPath8)">
+    <circle
+       id="head"
+       style="fill:#000000;stroke:none"
+       r="3"
+       cy="3"
+       cx="19" />
+    <path
+       id="torso"
+       style="stroke-width:6"
+       d="M 16,9 11,19" />
+    <path
+       id="limbs"
+       d="M 29,28 24,18 11,19 16,7.75 8,8 5,14" />
+  </g>
+  <circle
+     id="wheel"
+     cx="10"
+     cy="23"
+     r="7.25" />
+</svg>

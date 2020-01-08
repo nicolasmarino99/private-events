@@ -1,0 +1,44 @@
+<div id="navbar">
+    <div class="ui secondary menu navbar">
+        <%= link_to "Private Events", root_path, class: "item logo" %>
+        <div class="ui icon input">
+                <input type="text" placeholder="Search...">
+            <i class="search link icon"></i>
+        </div>
+        <div class="right menu">
+            <div class="hover-item flex-link">
+                <i class="fa fa-plus"></i>
+                <%= link_to "Create event", new_event_path, class: "ui item"%>
+            </div>
+            <div class="hover-item flex-link">
+                <i class="fa fa-heart"></i>
+                <%= link_to "Like", "#", class:"ui item" %>
+            </div>
+            <div class="hover-item flex-link">
+                <i class="fa fa-ticket"></i>
+                <a class="ui item">Tickets</a>
+            </div>
+
+            
+            <div class="ui simple dropdown item hover-item">
+                <a class="item profile-pic-small">
+                    
+                    <% if @user && @user.profile_picture.attached? %>
+                        <%= image_tag(current_user.profile_picture) %>
+                    <% else %>
+                        <img url='https://cdn3.iconfinder.com/data/icons/login-4/512/LOGIN-10-512.png'></img>
+                    <% end %>
+                    <i class="dropdown icon"></i>
+                
+                </a>
+                <div class="menu">
+                    <div class="ui link list">
+                        <%= link_to "Profile", current_user, class: "item" %>
+                        <%= link_to "Edit profile", edit_user_path(current_user), class: "item" %>
+                        <%= link_to "Log out", logout_path, method: :delete, class:"item" %>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
