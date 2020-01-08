@@ -8,6 +8,8 @@ In this app we created a blog where users can create and attend events, similar 
 
 ## Preview
 
+- [Live version](https://serene-beyond-48205.herokuapp.com/)
+
 ![Alt text](app/assets/images/PrivateEvents.jpg "Optional title")
 
 ## Built with
